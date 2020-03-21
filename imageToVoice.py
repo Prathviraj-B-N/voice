@@ -31,11 +31,11 @@ while True:
             webcam.release()
             print("Processing image...")
             img_ = cv2.imread('saved_img.jpg', cv2.IMREAD_ANYCOLOR)
-            print("Converting RGB image to grayscale...")
-            gray = cv2.cvtColor(img_, cv2.COLOR_BGR2GRAY)
-            print("Converted RGB image to grayscale...")
-            img_resized = cv2.imwrite(filename='saved_img-final.jpg', img=gray)
-            print("Image saved!")
+            #print("Converting RGB image to grayscale...")
+            #gray = cv2.cvtColor(img_, cv2.COLOR_BGR2GRAY)
+            #print("Converted RGB image to grayscale...")
+            #img_resized = cv2.imwrite(filename='saved_img-final.jpg', img=gray)
+            #print("Image saved!")
 
             break
 
@@ -56,7 +56,7 @@ while True:
 # pass to AWS
 
 
-photo = '/home/pi/voice/saved_img.jpg'
+photo = 'saved_img.jpg'
 
 client = boto3.client('rekognition',
                       aws_access_key_id = access_key_id,
@@ -70,9 +70,8 @@ response = client.detect_text(Image={'Bytes':source_bytes}
 
 #print(response)
 #GTTS
-print('[Processing image]')
 arr = []
-print('[converting...]')
+print('[converting]')
 language = 'en'
 for item in response['TextDetections']:
         if (item['Type']== 'LINE'):
