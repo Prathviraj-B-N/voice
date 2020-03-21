@@ -1,0 +1,2 @@
+# awsRekognize
+vid to txt
