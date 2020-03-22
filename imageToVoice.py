@@ -10,7 +10,7 @@ X = 'AKIA553AZGA3XY2KDXM2'
 Y = 'l3MpZeZ6pdrSpx2pvkfTMage0wkEaoVpsC2gqoWl'
 
 key = cv2. waitKey(1)
-webcam = cv2.VideoCapture('rtsp://192.168.43.117:8080/h264_ulaw.sdp')
+webcam = cv2.VideoCapture(0)
 
 os.environ['AWS_DEFAULT_REGION'] = 'us-east-2'
 access_key_id = X
