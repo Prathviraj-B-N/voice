@@ -4,7 +4,7 @@ import boto3            # Library required to use aws
 import os               # System path related operations
 from gtts import gTTS   # Library required to convert text to voice
 
-X = 'AKIA553AZGA3XY2KDXM2'                          # Password for my AWS account
+X = 'AKIA553AZGA3XY2KDXM2'                          # AWS api key , no longer valid . store this in .env for security
 Y = 'l3MpZeZ6pdrSpx2pvkfTMage0wkEaoVpsC2gqoWl'
 
 key = cv2. waitKey(1)                               # starts expecting a keypress
